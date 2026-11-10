@@ -16,43 +16,60 @@
 
   <main>
     <section class="gallery-section">
-      <h2>Explore Photos</h2>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Curated collection</p>
+          <h2>Explore Photos</h2>
+        </div>
+        <div class="filters" role="group" aria-label="Filter photos">
+          <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-button" type="button" data-filter="nature" aria-pressed="false">Nature</button>
+          <button class="filter-button" type="button" data-filter="architecture" aria-pressed="false">Architecture</button>
+          <button class="filter-button" type="button" data-filter="travel" aria-pressed="false">Travel</button>
+        </div>
+      </div>
 
       <div class="gallery">
-        <article class="gallery-item">
-          <img
-            src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=600"
-            alt="Mountain landscape beside a lake"
-          >
+        <article class="gallery-item" data-category="nature">
+          <button class="image-button" type="button" aria-label="Open Mountain Escape">
+            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1200" alt="Mountain landscape beside a lake">
+          </button>
           <h3>Mountain Escape</h3>
         </article>
 
-        <article class="gallery-item">
-          <img
-            src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=600"
-            alt="City skyline at night"
-          >
+        <article class="gallery-item" data-category="architecture">
+          <button class="image-button" type="button" aria-label="Open City Lights">
+            <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=1200" alt="City skyline at night">
+          </button>
           <h3>City Lights</h3>
         </article>
 
-        <article class="gallery-item">
-          <img
-            src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=600"
-            alt="Wildlife in a natural landscape"
-          >
+        <article class="gallery-item" data-category="nature">
+          <button class="image-button" type="button" aria-label="Open Wild Nature">
+            <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=1200" alt="Wildlife in a natural landscape">
+          </button>
           <h3>Wild Nature</h3>
         </article>
 
-        <article class="gallery-item">
-          <img
-            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600"
-            alt="Scenic countryside landscape"
-          >
+        <article class="gallery-item" data-category="travel">
+          <button class="image-button" type="button" aria-label="Open Open Horizons">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200" alt="Scenic countryside landscape">
+          </button>
           <h3>Open Horizons</h3>
         </article>
       </div>
     </section>
   </main>
+
+  <div class="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Close image viewer">&times;</button>
+    <button class="lightbox-control lightbox-previous" type="button" aria-label="Previous image">&#10094;</button>
+    <figure class="lightbox-content">
+      <img class="lightbox-image" src="" alt="">
+      <figcaption id="lightbox-title"></figcaption>
+    </figure>
+    <button class="lightbox-control lightbox-next" type="button" aria-label="Next image">&#10095;</button>
+  </div>
 
 </body>
 </html>
